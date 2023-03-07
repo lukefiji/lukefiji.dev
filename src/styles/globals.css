@@ -2,6 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  min-height: 100vh;
+  animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
+  background: linear-gradient(
+    325deg,
+    hsl(273deg 86% 29%) 0%,
+    hsl(267deg 78% 28%) 11%,
+    hsl(261deg 73% 27%) 22%,
+    hsl(255deg 69% 25%) 33%,
+    hsl(248deg 67% 23%) 44%,
+    hsl(241deg 65% 20%) 56%,
+    hsl(233deg 79% 16%) 67%,
+    hsl(229deg 92% 13%) 78%,
+    hsl(234deg 92% 11%) 89%,
+    hsl(240deg 100% 8%) 100%
+  );
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 @layer components {
   .body-text {
     @apply text-lg text-dark-gray dark:text-light-gray lg:text-xl;
