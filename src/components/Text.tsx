@@ -1,11 +1,22 @@
+import clsx from 'clsx';
 import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
+  underline?: boolean;
 }
 
-const Text = ({ children }: Props) => {
-  return <p className="body-text mb-4 md:mb-6">{children}</p>;
+const Text = ({ children, underline }: Props) => {
+  return (
+    <p
+      className={clsx(
+        'text-lg text-dark-gray dark:text-light-gray lg:text-xl',
+        { underline }
+      )}
+    >
+      {children}
+    </p>
+  );
 };
 
 export default Text;

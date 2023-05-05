@@ -5,12 +5,12 @@ import experienceList from '../constants/experienceList';
 
 const Page = () => {
   return (
-    <div className="p-8 md:p-12 lg:p-16">
-      <div className="mb-8 md:mb-12 lg:mb-16">
+    <div className="flex flex-col gap-8 p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
+      <div>
         <Logo />
       </div>
 
-      <div className="mb-8 md:mb-12 lg:mb-16">
+      <div>
         <Heading>Hey there, I&apos;m Luke! 👋🏻</Heading>
 
         <Text>
@@ -19,18 +19,16 @@ const Page = () => {
         </Text>
       </div>
 
-      <div className="flex gap-8 md:gap-12 lg:gap-16">
-        <div>
-          <Heading>Experience</Heading>
+      <div>
+        <Heading>Experience</Heading>
 
-          <List items={experienceList} />
-        </div>
+        <List items={experienceList} />
+      </div>
 
-        <div>
-          <Heading>Connect</Heading>
+      <div>
+        <Heading>Connect</Heading>
 
-          <List items={contactList} />
-        </div>
+        <List items={contactList} />
       </div>
     </div>
   );

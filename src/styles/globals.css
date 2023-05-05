@@ -34,11 +34,4 @@ body {
 }
 
 @layer components {
-  .body-text {
-    @apply text-lg text-dark-gray dark:text-light-gray lg:text-xl;
-  }
-
-  .heading-text {
-    @apply text-3xl font-bold text-dark-gray dark:text-light-gray md:text-4xl lg:text-5xl;
-  }
 }

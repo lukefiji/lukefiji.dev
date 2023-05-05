@@ -1,21 +1,22 @@
 import Link from 'next/link';
 import { Contact } from '../constants/contactList';
 import { Experience } from '../constants/experienceList';
+import Text from './Text';
 
 interface Props {
   items: Array<Contact> | Array<Experience>;
 }
 
 const List = ({ items }: Props) => (
-  <ul>
+  <ul className="flex flex-col gap-4 md:gap-6">
     {items.map(({ title, url }) => (
-      <li key={title} className="mb-4 md:mb-6">
+      <li key={title}>
         {url ? (
-          <Link href={url} className="body-text underline">
-            {title}
+          <Link href={url}>
+            <Text underline>{title}</Text>
           </Link>
         ) : (
-          <p className="body-text">{title}</p>
+          <Text>{title}</Text>
         )}
       </li>
     ))}
