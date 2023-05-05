@@ -1,10 +1,10 @@
-import Head from "next/head";
-import { Inter } from "next/font/google";
-import { Heading, Text, List, Logo } from "../components";
-import contactList from "../constants/contactList";
-import experienceList from "../constants/experienceList";
+import { Inter } from 'next/font/google';
+import Head from 'next/head';
+import { Heading, List, Logo, Text } from '../components';
+import contactList from '../constants/contactList';
+import experienceList from '../constants/experienceList';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (

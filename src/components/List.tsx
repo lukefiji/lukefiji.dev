@@ -1,6 +1,6 @@
-import { Contact } from "../constants/contactList";
-import { Experience } from "../constants/experienceList";
-import Link from "next/link";
+import Link from 'next/link';
+import { Contact } from '../constants/contactList';
+import { Experience } from '../constants/experienceList';
 
 interface Props {
   items: Array<Contact> | Array<Experience>;
