@@ -1,7 +1,8 @@
+import Spotlight from '@/components/Spotlight';
+import { cn } from '@/lib/utils';
+import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
-import clsx from 'clsx';
 import { ReactNode } from 'react';
-import '../styles/globals.css';
 
 interface Props {
   children: ReactNode;
@@ -9,9 +10,10 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <html lang="en" className={clsx('dark')}>
+    <html lang="en" className={cn('dark')}>
       <body>
-        <main>{children}</main>
+        <Spotlight />
+        <main className="min-h-screen overflow-hidden">{children}</main>
         <Analytics />
       </body>
     </html>

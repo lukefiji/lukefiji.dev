@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 
 interface Props {
@@ -9,9 +9,16 @@ interface Props {
 const Text = ({ children, underline }: Props) => {
   return (
     <p
-      className={clsx(
-        'text-lg text-dark-gray dark:text-light-gray lg:text-xl',
-        { underline }
+      className={cn(
+        [
+          'text-lg lg:text-xl',
+          'text-dark-gray dark:text-light-gray',
+          'transition-colors',
+          'hover:dark:text-slate-400',
+        ],
+        {
+          underline,
+        },
       )}
     >
       {children}
