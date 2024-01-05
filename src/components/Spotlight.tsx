@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { useAnimate, motion, useMotionValue } from 'framer-motion';
+import { motion, useAnimate, useMotionValue } from 'framer-motion';
 import { useEffect } from 'react';
 
 interface Props {
@@ -14,14 +14,13 @@ const Spotlight = ({ size = 1024 }: Props) => {
   const lightX = useMotionValue(0);
   const lightY = useMotionValue(0);
   const opacity = useMotionValue(0);
-  // const isVisible = useRef<boolean>(false);
 
   useEffect(() => {
+    animate(scope.current, { opacity: 1 }, { duration: 0.25 });
+
     function handleMouseMove(event: MouseEvent) {
       lightX.set(event.clientX - size / 2);
       lightY.set(event.clientY - size / 2);
-
-      animate(scope.current, { opacity: 1 }, { duration: 0.25 });
     }
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -33,6 +32,7 @@ const Spotlight = ({ size = 1024 }: Props) => {
     <motion.div
       ref={scope}
       className={cn([
+        // 'hidden sm:block',
         'fixed',
         'pointer-events-none',
         'mix-blend-plus-lighter',
