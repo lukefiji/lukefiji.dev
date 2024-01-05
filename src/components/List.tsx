@@ -9,7 +9,7 @@ interface Props {
 }
 
 const List = ({ items }: Props) => (
-  <ul className="flex flex-col items-start gap-4 md:gap-6">
+  <ul className="flex flex-col items-start gap-2 md:gap-4">
     {items.map(({ title, url }) => (
       <li key={title}>
         {url ? (

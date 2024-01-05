@@ -1,4 +1,5 @@
 import { Heading, List, Logo, Text } from '@/components';
+import HandWave from '@/components/HandWave';
 import contactList from '@/constants/contactList';
 import experienceList from '@/constants/experienceList';
 import { Metadata } from 'next';
@@ -12,11 +13,19 @@ const Page = () => {
         </div>
 
         <div>
-          <Heading>Hey there, I&apos;m Luke! 👋🏻</Heading>
+          <Heading>
+            Hey there, I&apos;m Luke! <HandWave />
+          </Heading>
 
-          <Text>
-            I am a curious adventurer on a never-ending journey of discovery and
-            growth.
+          <Text className="max-w-screen-sm">
+            As an experienced frontend software engineer, my drive in crafting
+            sleek, intuitive experiences is matched only by my lifelong passion
+            for learning. I eagerly{' '}
+            <em className="opacity-75">(and carefully!)</em> embrace my
+            industry&apos;s latest trends and tools, constantly seeking new
+            knowledge to broaden my impact. In essence, I am a curious
+            adventurer on a never-ending journey of professional and personal
+            growth, ready to explore new horizons ~ 🌊 ⛵️
           </Text>
         </div>
 
