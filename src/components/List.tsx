@@ -1,5 +1,6 @@
 import { Contact } from '@/constants/contactList';
 import { Experience } from '@/constants/experienceList';
+import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Text from './Text';
 
@@ -13,7 +14,12 @@ const List = ({ items }: Props) => (
       <li key={title}>
         {url ? (
           <Link href={url}>
-            <Text underline>{title}</Text>
+            <Text
+              underline
+              className={cn(!!url && 'hover:dark:text-slate-400')}
+            >
+              {title}
+            </Text>
           </Link>
         ) : (
           <Text>{title}</Text>

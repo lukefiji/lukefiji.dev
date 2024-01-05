@@ -1,12 +1,14 @@
 import { cn } from '@/lib/utils';
+import { type ClassValue } from 'clsx';
 import { ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   underline?: boolean;
+  className?: ClassValue;
 }
 
-const Text = ({ children, underline }: Props) => {
+const Text = ({ children, underline, className }: Props) => {
   return (
     <p
       className={cn(
@@ -14,11 +16,11 @@ const Text = ({ children, underline }: Props) => {
           'text-lg lg:text-xl',
           'text-dark-gray dark:text-light-gray',
           'transition-colors',
-          'hover:dark:text-slate-400',
         ],
         {
           underline,
         },
+        className,
       )}
     >
       {children}
