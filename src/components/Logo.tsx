@@ -7,7 +7,7 @@ const Logo = () => {
         <title>Luke Fiji logo</title>
         <g>
           <path
-            className="fill-dark-gray dark:fill-light-gray"
+            className="fill-dark-gray mix-blend-difference dark:fill-light-gray"
             d="M0,0v78h78V0H0z M36,55H15V23h6v27h15V55z M62.9,28H47v9h14v5H47v13h-5V23h20.9L62.9,28z"
           />
           <polygon

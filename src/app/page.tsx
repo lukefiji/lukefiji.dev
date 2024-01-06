@@ -1,23 +1,19 @@
-import { Heading, List, Logo, Text } from '@/components';
+import { Heading, List, Text } from '@/components';
+import Experience from '@/components/Experience';
 import HandWave from '@/components/HandWave';
 import contactList from '@/constants/contactList';
-import experienceList from '@/constants/experienceList';
 import { Metadata } from 'next';
 
 const Page = () => {
   return (
     <>
       <div className="flex flex-col gap-8 p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
-        <div>
-          <Logo />
-        </div>
-
-        <div>
+        <div className="max-w-screen-sm">
           <Heading>
             Hey there, I&apos;m Luke! <HandWave />
           </Heading>
 
-          <Text className="max-w-screen-sm">
+          <Text className="">
             As an experienced frontend software engineer, my drive in crafting
             sleek, intuitive experiences is matched only by my lifelong passion
             for learning. I eagerly{' '}
@@ -29,11 +25,7 @@ const Page = () => {
           </Text>
         </div>
 
-        <div>
-          <Heading>Experience</Heading>
-
-          <List items={experienceList} />
-        </div>
+        <Experience />
 
         <div>
           <Heading>Connect</Heading>

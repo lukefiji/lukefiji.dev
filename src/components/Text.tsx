@@ -13,8 +13,8 @@ const Text = ({ children, underline, className }: Props) => {
     <p
       className={cn(
         [
-          'text-lg lg:text-xl',
-          'text-dark-gray dark:text-light-gray',
+          'lg:text-lg',
+          'text-slate-700 dark:text-slate-400',
           'transition-colors',
         ],
         {

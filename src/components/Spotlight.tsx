@@ -32,7 +32,7 @@ const Spotlight = ({ size = 1024 }: Props) => {
     <motion.div
       ref={scope}
       className={cn([
-        // 'hidden sm:block',
+        'hidden sm:block',
         'fixed',
         'pointer-events-none',
         'mix-blend-plus-lighter',

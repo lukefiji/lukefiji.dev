@@ -1,11 +1,10 @@
 import { Contact } from '@/constants/contactList';
-import { Experience } from '@/constants/experienceList';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import Text from './Text';
 
 interface Props {
-  items: Array<Contact | Experience>;
+  items: Array<Contact>;
 }
 
 const List = ({ items }: Props) => (

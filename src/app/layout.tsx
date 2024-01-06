@@ -1,3 +1,4 @@
+import { Logo } from '@/components';
 import Spotlight from '@/components/Spotlight';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
@@ -13,7 +14,19 @@ const Layout = ({ children }: Props) => {
     <html lang="en" className={cn('dark')}>
       <body>
         <Spotlight />
+
+        <div
+          className={cn(
+            '',
+            'sm:top:12 sticky top-8 mb-8 ml-8 md:top-12 md:ml-12 lg:top-16 lg:mb-16 lg:ml-16',
+            // 'backdrop-invert backdrop-filter ',
+          )}
+        >
+          <Logo />
+        </div>
+
         <main className="min-h-screen overflow-hidden">{children}</main>
+
         <Analytics />
       </body>
     </html>
