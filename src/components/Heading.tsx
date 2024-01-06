@@ -25,7 +25,7 @@ export const Heading2 = ({ children }: Props) => {
       className={cn(
         'text-lg  md:text-xl lg:text-2xl',
         'font-bold text-dark-gray dark:text-light-gray',
-        'mb-2 md:mb-4 lg:mb-6',
+        'mb-4 lg:mb-6',
       )}
     >
       {children}
