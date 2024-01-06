@@ -1,11 +1,17 @@
-import { Heading } from '@/components';
+import { Heading2 } from '@/components';
 import experienceDetails from '@/constants/experienceDetails';
+import { cn } from '@/lib/utils';
+import { type ClassValue } from 'clsx';
 import Link from 'next/link';
 
-const Experience = () => {
+interface Props {
+  className?: ClassValue;
+}
+
+const Experience = ({ className }: Props) => {
   return (
-    <div className="max-w-lg">
-      <Heading>Experience</Heading>
+    <div className={cn(className)}>
+      <Heading2>Experience</Heading2>
 
       {experienceDetails.map(({ company, role, description, skills, url }) => (
         <div key={company} className="mb-8 space-y-4">

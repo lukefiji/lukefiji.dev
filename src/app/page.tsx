@@ -1,4 +1,4 @@
-import { Heading, List, Text } from '@/components';
+import { Heading, Heading2, List, Text } from '@/components';
 import Experience from '@/components/Experience';
 import HandWave from '@/components/HandWave';
 import contactList from '@/constants/contactList';
@@ -7,13 +7,13 @@ import { Metadata } from 'next';
 const Page = () => {
   return (
     <>
-      <div className="flex flex-col gap-8 p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
-        <div className="max-w-screen-sm">
+      <div className="grid max-w-screen-xl gap-8 lg:grid-cols-5 lg:grid-rows-2 lg:gap-16">
+        <div className="max-w-screen-sm space-y-8 lg:col-span-2 lg:row-span-1">
           <Heading>
             Hey there, I&apos;m Luke! <HandWave />
           </Heading>
 
-          <Text className="">
+          <Text>
             As an experienced frontend software engineer, my drive in crafting
             sleek, intuitive experiences is matched only by my lifelong passion
             for learning. I eagerly{' '}
@@ -23,15 +23,15 @@ const Page = () => {
             adventurer on a never-ending journey of professional and personal
             growth, ready to explore new horizons ~ 🌊 ⛵️
           </Text>
+
+          <div>
+            <Heading2>Connect</Heading2>
+
+            <List items={contactList} />
+          </div>
         </div>
 
-        <Experience />
-
-        <div>
-          <Heading>Connect</Heading>
-
-          <List items={contactList} />
-        </div>
+        <Experience className="max-w-screen-sm lg:col-span-3 lg:row-span-2" />
       </div>
     </>
   );
