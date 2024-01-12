@@ -40,7 +40,14 @@ const ExperienceList = ({ className }: Props) => {
               </div>
             ))}
           </div>
-          <hr />
+
+          <hr
+            className={cn(
+              'mx-auto h-[1px] overflow-visible border-0',
+              'shadow-[0_0_30px_1px] shadow-slate-600',
+              'bg-gradient-to-r from-slate-700/20 via-slate-700 to-slate-700/20',
+            )}
+          />
         </div>
       ))}
     </div>
