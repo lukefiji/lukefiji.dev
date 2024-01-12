@@ -1,14 +1,24 @@
-import { Heading, Heading2, List, Text } from '@/components';
-import Experience from '@/components/Experience';
-import HandWave from '@/components/HandWave';
-import contactList from '@/constants/contactList';
+import {
+  Connect,
+  Experience,
+  HandWave,
+  Heading,
+  Heading2,
+  Logo,
+  Text,
+} from '@/components';
+
 import { Metadata } from 'next';
 
 const Page = () => {
   return (
     <>
-      <div className="grid max-w-screen-xl gap-8 lg:grid-cols-5 lg:grid-rows-2 lg:gap-16">
-        <div className="max-w-screen-sm space-y-8 lg:col-span-2 lg:row-span-1">
+      <div className="mx-auto grid max-w-screen-xl items-start gap-8 lg:grid-cols-5 lg:grid-rows-2 lg:gap-16">
+        <div className="top-16 max-w-screen-sm space-y-8 lg:sticky lg:col-span-2 lg:row-span-2">
+          <div>
+            <Logo />
+          </div>
+
           <Heading>
             Hey there, I&apos;m Luke! <HandWave />
           </Heading>
@@ -24,14 +34,12 @@ const Page = () => {
             growth, ready to explore new horizons ~ 🌊 ⛵️
           </Text>
 
-          <div>
-            <Heading2>Connect</Heading2>
+          <Heading2>Connect</Heading2>
 
-            <List items={contactList} />
-          </div>
+          <Connect />
         </div>
 
-        <Experience className="max-w-screen-sm lg:col-span-3 lg:row-span-2" />
+        <Experience className="lg:col-span-3 lg:row-span-2 lg:pt-24" />
       </div>
     </>
   );

@@ -1,5 +1,4 @@
-import { Logo } from '@/components';
-import Spotlight from '@/components/Spotlight';
+import { Spotlight } from '@/components';
 import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
@@ -9,23 +8,13 @@ interface Props {
   children: ReactNode;
 }
 
-const Layout = ({ children }: Props) => {
+const RootLayout = ({ children }: Props) => {
   return (
     <html lang="en" className={cn('dark')}>
       <body>
         <Spotlight />
 
-        <div
-          className={cn(
-            '',
-            'sm:top:12 sticky top-8 mb-8 ml-8 md:top-12 md:ml-12 lg:top-16 lg:mb-16 lg:ml-16',
-            // 'backdrop-invert backdrop-filter ',
-          )}
-        >
-          <Logo />
-        </div>
-
-        <main className="min-h-screen overflow-hidden p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
+        <main className="min-h-screen p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
           {children}
         </main>
 
@@ -35,4 +24,4 @@ const Layout = ({ children }: Props) => {
   );
 };
 
-export default Layout;
+export default RootLayout;

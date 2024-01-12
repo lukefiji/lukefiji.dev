@@ -19,12 +19,10 @@ const Experience = ({ className }: Props) => {
             <h2 className="text-md lg:text-lg">{role}</h2>
 
             {url ? (
-              <Link
-                href={url}
-                className="lg:text-md text-sm underline"
-                target="_blank"
-              >
-                {company}
+              <Link href={url} target="_blank">
+                <span className="lg:text-md text-sm underline transition-colors hover:text-slate-400">
+                  {company}
+                </span>
               </Link>
             ) : (
               <p className="lg:text-md text-sm">{company}</p>

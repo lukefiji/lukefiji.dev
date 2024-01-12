@@ -9,7 +9,7 @@ const Heading = ({ children }: Props) => {
   return (
     <h1
       className={cn(
-        'text-2xl  md:text-3xl lg:text-4xl',
+        'text-2xl  lg:text-3xl xl:text-4xl',
         'font-bold text-dark-gray dark:text-light-gray',
         'mb-4 md:mb-6 lg:mb-8',
       )}
