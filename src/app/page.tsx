@@ -34,9 +34,11 @@ const Page = () => {
             growth, ready to explore new horizons ~ 🌊 ⛵️
           </Text>
 
-          <Heading2>Connect</Heading2>
+          <div>
+            <Heading2>Connect</Heading2>
 
-          <Connect />
+            <Connect />
+          </div>
         </div>
 
         <Experience className="lg:col-span-3 lg:row-span-2 lg:pt-24" />
