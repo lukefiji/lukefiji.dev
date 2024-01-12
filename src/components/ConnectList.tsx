@@ -1,7 +1,7 @@
 import contactList from '@/constants/contactList';
 import Link from 'next/link';
 
-const Connect = () => {
+const ConnectList = () => {
   return (
     <div className="flex gap-6 text-3xl">
       {contactList.map(({ title, url, IconComponent }) => (
@@ -13,4 +13,4 @@ const Connect = () => {
   );
 };
 
-export default Connect;
+export default ConnectList;

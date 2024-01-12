@@ -1,6 +1,6 @@
 import {
-  Connect,
-  Experience,
+  ConnectList,
+  ExperienceList,
   HandWave,
   Heading,
   Heading2,
@@ -36,13 +36,13 @@ const Page = () => {
 
           <div>
             <Heading2>Connect</Heading2>
-            <Connect />
+            <ConnectList />
           </div>
         </div>
 
         <div className="lg:col-span-3 lg:row-span-2 lg:pt-24">
           <Heading2>Experience</Heading2>
-          <Experience />
+          <ExperienceList />
         </div>
       </div>
     </>

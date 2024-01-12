@@ -7,7 +7,7 @@ interface Props {
   className?: ClassValue;
 }
 
-const Experience = ({ className }: Props) => {
+const ExperienceList = ({ className }: Props) => {
   return (
     <div className={cn(className)}>
       {experienceDetails.map(({ company, role, description, skills, url }) => (
@@ -40,7 +40,6 @@ const Experience = ({ className }: Props) => {
               </div>
             ))}
           </div>
-
           <hr />
         </div>
       ))}
@@ -48,4 +47,4 @@ const Experience = ({ className }: Props) => {
   );
 };
 
-export default Experience;
+export default ExperienceList;

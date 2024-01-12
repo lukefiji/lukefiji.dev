@@ -1,5 +1,5 @@
-export { default as Connect } from './Connect';
-export { default as Experience } from './Experience';
+export { default as ConnectList } from './ConnectList';
+export { default as ExperienceList } from './ExperienceList';
 export { default as HandWave } from './HandWave';
 export { default as Heading, Heading2 } from './Heading';
 export { default as List } from './List';
