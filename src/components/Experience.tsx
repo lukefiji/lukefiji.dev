@@ -1,4 +1,3 @@
-import { Heading2 } from '@/components';
 import experienceDetails from '@/constants/experienceDetails';
 import { cn } from '@/lib/utils';
 import { type ClassValue } from 'clsx';
@@ -11,33 +10,33 @@ interface Props {
 const Experience = ({ className }: Props) => {
   return (
     <div className={cn(className)}>
-      <Heading2>Experience</Heading2>
-
       {experienceDetails.map(({ company, role, description, skills, url }) => (
         <div key={company} className="mb-8 space-y-4">
           <div>
-            <h2 className="text-md lg:text-lg">{role}</h2>
+            <h2 className="text-base lg:text-lg">{role}</h2>
 
             {url ? (
               <Link href={url} target="_blank">
-                <span className="lg:text-md text-sm underline transition-colors hover:text-slate-400">
+                <span className="text-sm underline transition-colors hover:text-slate-400 lg:text-base">
                   {company}
                 </span>
               </Link>
             ) : (
-              <p className="lg:text-md text-sm">{company}</p>
+              <p className="text-sm lg:text-base">{company}</p>
             )}
           </div>
 
-          <p className="text-sm text-slate-400">{description}</p>
+          <p className="text-sm text-slate-400  lg:text-base">{description}</p>
 
           <div className="flex flex-wrap gap-2">
             {skills.map((item) => (
               <div
-                key="item"
-                className="rounded-full bg-indigo-950 px-3 py-1 text-xs text-indigo-200"
+                key={item}
+                className="rounded-full bg-gradient-to-b from-indigo-900 to-indigo-950 p-[1px]"
               >
-                {item}
+                <div className="rounded-full bg-indigo-950 px-3 py-1 text-xs text-indigo-200">
+                  {item}
+                </div>
               </div>
             ))}
           </div>

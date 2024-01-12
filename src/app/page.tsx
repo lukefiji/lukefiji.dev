@@ -36,12 +36,14 @@ const Page = () => {
 
           <div>
             <Heading2>Connect</Heading2>
-
             <Connect />
           </div>
         </div>
 
-        <Experience className="lg:col-span-3 lg:row-span-2 lg:pt-24" />
+        <div className="lg:col-span-3 lg:row-span-2 lg:pt-24">
+          <Heading2>Experience</Heading2>
+          <Experience />
+        </div>
       </div>
     </>
   );
