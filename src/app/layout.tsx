@@ -15,6 +15,8 @@ const RootLayout = ({ children }: Props) => {
       <body>
         <Spotlight />
 
+        {/* <Nav /> */}
+
         <main className="min-h-screen p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
           {children}
         </main>

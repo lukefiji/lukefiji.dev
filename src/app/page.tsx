@@ -15,9 +15,7 @@ const Page = () => {
     <>
       <div className="mx-auto grid max-w-screen-xl items-start gap-8 lg:grid-cols-5 lg:grid-rows-2 lg:gap-16">
         <div className="top-16 max-w-screen-sm space-y-8 lg:sticky lg:col-span-2 lg:row-span-2">
-          <div>
-            <Logo />
-          </div>
+          <Logo />
 
           <Heading>
             Hey there, I&apos;m Luke! <HandWave />
