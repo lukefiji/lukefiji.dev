@@ -24,9 +24,7 @@ const navLinks = [
   },
 ];
 
-interface Props {}
-//
-const Nav = ({}: Props) => {
+const Nav = () => {
   return (
     <div
       className={cn(
