@@ -35,18 +35,24 @@ const Nav = () => {
         className={cn(
           'flex justify-center gap-12',
           'max-w-screen-sm',
-          'rounded-full px-6',
-          'bg-slate-950/30 backdrop-blur-md',
-          'shadow-[inset_0px_1px_1px_0px_rgba(255,255,255,.2),inset_0px_-1px_1px_0px_rgba(128,128,128,.1),0_20px_25px_-5px_rgb(0_0_0/0.1),_0_8px_10px_-6px_rgb(0_0_0/0.1)]',
+          'rounded-full px-8',
+          'bg-gradient-to-b from-slate-200/[.05] to-slate-200/0',
+          'backdrop-blur-md',
+          'shadow-[inset_0px_1px_1px_0px_rgba(255,255,255,.15),inset_0px_-1px_1px_0px_rgba(128,128,128,.05),0_20px_25px_-5px_rgb(0_0_0/0.1),_0_8px_10px_-6px_rgb(0_0_0/0.1)]',
         )}
       >
         {navLinks.map(({ url, title }) => (
           <Link
             href={url}
             key={title}
-            className={cn('text-slate-400 hover:text-slate-200', 'py-4')}
+            className={cn(
+              'bg-clip-text text-transparent',
+              'bg-gradient-to-b from-slate-200 to-slate-600',
+              'hover:from-slate-300 hover:to-slate-900',
+              'py-4',
+            )}
           >
-            <div className="font-semibold transition">{title}</div>
+            <span className="font-semibold transition">{title}</span>
           </Link>
         ))}
       </div>

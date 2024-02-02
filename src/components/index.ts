@@ -6,3 +6,4 @@ export { default as List } from './List';
 export { default as Logo } from './Logo';
 export { default as Spotlight } from './Spotlight';
 export { default as Text } from './Text';
+export { default as Nav } from './Nav';
