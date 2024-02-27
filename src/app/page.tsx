@@ -48,7 +48,7 @@ const Page = () => {
 };
 
 export const metadata: Metadata = meta({
-  title: 'Luke Fiji | Digital Experience Creator',
+  title: 'Luke Fiji',
   description:
     'Get to know how I can transform your ideas into digital realities!',
 });

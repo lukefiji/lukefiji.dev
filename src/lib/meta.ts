@@ -12,8 +12,7 @@ export function meta({ title, description }: IMeta): Metadata {
     openGraph: {
       title,
       description,
-      url: 'https://lukefiji.dev',
-      siteName: title,
+      siteName: 'Luke Fiji',
       locale: 'en_US',
       type: 'website',
     },
