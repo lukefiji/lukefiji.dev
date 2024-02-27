@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactNode } from 'react';
+import Providers from './Providers';
 
 interface Props {
   children: ReactNode;
@@ -17,9 +18,11 @@ const RootLayout = ({ children }: Props) => {
 
         {/* <Nav /> */}
 
-        <main className="min-h-screen p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
-          {children}
-        </main>
+        <Providers>
+          <main className="min-h-screen p-8 md:gap-12 md:p-12 lg:gap-16 lg:p-16">
+            {children}
+          </main>
+        </Providers>
 
         <SpeedInsights />
         <Analytics />
