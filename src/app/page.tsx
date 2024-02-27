@@ -7,7 +7,7 @@ import {
   Logo,
   Text,
 } from '@/components';
-
+import { meta } from '@/lib/meta';
 import { Metadata } from 'next';
 
 const Page = () => {
@@ -47,10 +47,11 @@ const Page = () => {
   );
 };
 
-export const metadata: Metadata = {
-  title: 'Luke Fiji',
-  description: 'Luke Fiji - Frontend Software Engineer',
-};
+export const metadata: Metadata = meta({
+  title: 'Luke Fiji | Digital Experience Creator',
+  description:
+    'Get to know how I can transform your ideas into digital realities!',
+});
 
 export const viewport = {
   width: 'device-width',
